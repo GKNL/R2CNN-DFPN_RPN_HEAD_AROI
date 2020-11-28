@@ -6,7 +6,10 @@ from __future__ import print_function
 
 import cv2
 import numpy as np
-
+"""
+VOC xml格式标注转换工具
+eg：从[y1, x1, y2, x2, y3, x3, y4, x4]转换为[y_c, x_c, h, w, theta]
+"""
 
 def forward_convert(coordinate, with_label=True):
     """
