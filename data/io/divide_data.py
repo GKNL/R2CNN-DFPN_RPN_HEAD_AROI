@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+# @Time    : 2020/11/29 16:24
+# @Author  : Peng Miao
+# @File    : divide_data.py
+# @Intro   : 分割数据集，将原始的图片数据集和标注数据集，按照一定的比例，分别对应地划分为train和test数据集
+
 from __future__ import division, print_function, absolute_import
 import sys
 sys.path.append('../../')
@@ -11,7 +16,6 @@ import math
 def mkdir(path):
     if not os.path.exists(path):
         os.makedirs(path)
-
 
 divide_rate = 0.9
 

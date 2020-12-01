@@ -130,6 +130,7 @@ def get_angles(thetas, heads):
 
 def get_head(center_point, angle):
     """
+    根据中心点和选择角度，计算船头方向！！！！！！！！！！！！！！！！
     :param center_point: [x, y]
     :param angle: angle [-180, 180]
     :return: head point [x, y]

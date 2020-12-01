@@ -14,7 +14,7 @@ def rotate_gpu_nms(np.ndarray[np.float32_t, ndim=2] dets, np.float_t thresh, np.
         keep = np.zeros(boxes_num, dtype=np.int32)
     cdef np.ndarray[np.float32_t, ndim=1] \
         scores = dets[:, 5]
-    cdef np.ndarray[np.int_t, ndim=1] \
+    cdef np.ndarray[np.intp_t, ndim=1] \
         order = scores.argsort()[::-1]
     cdef np.ndarray[np.float32_t, ndim=2] \
         sorted_dets = dets[order, :]

@@ -56,7 +56,7 @@ def get_file_paths_recursive(folder=None, file_ext=None):
 
 
 def visualize_detection(src_img, boxes, scores):
-    """ visualize detections in one image
+    """ visualize detections in one image【检测结果图像可视化】
     :param src_img: numpy.array
     :param boxes: [[x1, y1, x2, y2]...], each row is one object
     :param class_names: class names, and each row is one object
@@ -343,6 +343,10 @@ def detect_img(file_paths, des_folder, det_th, h_len, w_len, h_overlap, w_overla
         # config.gpu_options.per_process_gpu_memory_fraction = 0.5
         config.gpu_options.allow_growth = True
 
+        # ***********************************************************************************************
+        # *                                         运行定义好的图                                        *
+        # ***********************************************************************************************
+
         with tf.Session(config=config) as sess:
             sess.run(init_op)
             if not restorer is None:
@@ -397,7 +401,7 @@ def detect_img(file_paths, des_folder, det_th, h_len, w_len, h_overlap, w_overla
                                       fast_rcnn_head_quadrant],
                                      feed_dict={img_plac: src_img})
                         if show_res:
-                            visualize_detection(src_img, boxes, scores)
+                            visualize_detection(src_img, boxes, scores) # 可视化检测结果
                         if len(boxes) > 0:
                             for ii in range(len(boxes)):
                                 box = boxes[ii]
