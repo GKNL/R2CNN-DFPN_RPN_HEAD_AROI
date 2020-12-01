@@ -1,0 +1,15 @@
+﻿配置：win10+tf10.0+cuda9+vs2015
+显卡:1050Ti
+
+注意！！！【从D:\Anaconda\AnacondaPlace\Lib\distutils下删除distutils.cfg文件，否则的话，电脑是使用mingw32来进行编译】
+
+步骤：
+编译setup.py，需要修改以下几处
+1.rotate_polygon_nms.pyx 17行改成intp_t（原本是什么记不住了）
+2.overlaps和polygon两个cu中各有一行bool语句含有and，改为&&
+3.rotate_polygon_nms.cpp中某行会报数据类型不符，将原本的类型改为int *(这个在具体编译的时候会显示出来是哪一行)
+4.box_util文件夹下新建nms文件夹，放入overlaps和polygon两个hpp与cu(若想忽略此步骤，需要修改setup中文件位置还是啥的，我懒得研究了)
+
+****一定要完成1.2两步骤后在进行setup编译，否则编译生成的pyd文件中数据类型会有定义错误，且无法通过pyx或cpp中修改类型 进行修改
+
+最后box_util文件夹下生成三个pyd文件，即为成功

@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FPN_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FPN_v1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/io/divide_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/io/divide_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/box_utils/rbbox_overlaps_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/libs/box_utils/rbbox_overlaps_kernel.cu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms.pyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/libs/box_utils/rotate_polygon_nms_kernel.cu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/configs/cfgs.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/configs/cfgs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/shapan_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/shapan_utils.py" afterDir="false" />
+    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】">
+      <change afterPath="$PROJECT_DIR$/libs/box_utils/Introduction.of.related.changes.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +265,7 @@
       <workItem from="1606629812750" duration="19392000" />
       <workItem from="1606713618646" duration="13374000" />
       <workItem from="1606730000364" duration="3144000" />
-      <workItem from="1606791389918" duration="21076000" />
+      <workItem from="1606791389918" duration="21387000" />
     </task>
     <task id="LOCAL-00001" summary="数据集标注格式转换文件注释">
       <created>1606569996231</created>
@@ -287,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606569996231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】">
+      <created>1606818443814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606818443815</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +310,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据集标注格式转换文件注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据集标注格式转换文件注释" />
+    <MESSAGE value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
