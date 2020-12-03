@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference.py" afterDir="false" />
-    </list>
+    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="add a declaration of this repository" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +242,7 @@
       <workItem from="1606791389918" duration="21716000" />
       <workItem from="1606831381878" duration="1072000" />
       <workItem from="1606885516839" duration="7765000" />
-      <workItem from="1606974178232" duration="2023000" />
+      <workItem from="1606974178232" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="数据集标注格式转换文件注释">
       <created>1606569996231</created>
@@ -271,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606818644246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add a declaration of this repository">
+      <created>1606983112464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606983112464</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +303,8 @@
     <MESSAGE value="数据集标注格式转换文件注释" />
     <MESSAGE value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
     <MESSAGE value="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题" />
+    <MESSAGE value="add a declaration of this repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a declaration of this repository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
