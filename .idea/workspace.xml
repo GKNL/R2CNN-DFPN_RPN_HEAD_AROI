@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】">
-      <change afterPath="$PROJECT_DIR$/libs/box_utils/Introduction.of.related.changes.txt" afterDir="false" />
+    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.setup1">
+  <component name="RunManager" selected="Python.coordinate_convert">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,6 +117,28 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration name="coordinate_convert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FPN_v1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/box_utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/box_utils/coordinate_convert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FPN_v1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,28 +154,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/inference.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="newsetup" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FPN_v1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/box_utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/box_utils/newsetup.py" />
-      <option name="PARAMETERS" value="build_ext --inplace" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -201,28 +205,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="setup_cuda" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FPN_v1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/box_utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/box_utils/setup_cuda.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -234,18 +216,16 @@
     </configuration>
     <list>
       <item itemvalue="Python.inference" />
-      <item itemvalue="Python.newsetup" />
       <item itemvalue="Python.setup1" />
-      <item itemvalue="Python.setup_cuda" />
       <item itemvalue="Python.setup" />
+      <item itemvalue="Python.coordinate_convert" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.coordinate_convert" />
+        <item itemvalue="Python.inference" />
         <item itemvalue="Python.setup1" />
         <item itemvalue="Python.setup" />
-        <item itemvalue="Python.newsetup" />
-        <item itemvalue="Python.inference" />
-        <item itemvalue="Python.setup_cuda" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +245,10 @@
       <workItem from="1606629812750" duration="19392000" />
       <workItem from="1606713618646" duration="13374000" />
       <workItem from="1606730000364" duration="3144000" />
-      <workItem from="1606791389918" duration="21387000" />
+      <workItem from="1606791389918" duration="21716000" />
+      <workItem from="1606831381878" duration="1072000" />
+      <workItem from="1606885516839" duration="7765000" />
+      <workItem from="1606974178232" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="数据集标注格式转换文件注释">
       <created>1606569996231</created>
@@ -281,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606818443815</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题">
+      <created>1606818644246</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606818644246</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据集标注格式转换文件注释" />
     <MESSAGE value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
+    <MESSAGE value="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,8 +342,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup1.coverage" NAME="setup1 Coverage Results" MODIFIED="1606817663579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
+    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$coordinate_convert.coverage" NAME="coordinate_convert Coverage Results" MODIFIED="1606898299539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$newsetup.coverage" NAME="newsetup Coverage Results" MODIFIED="1606813636672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
-    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$inference.coverage" NAME="inference Coverage Results" MODIFIED="1606800530473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$inference.coverage" NAME="inference Coverage Results" MODIFIED="1606818678204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$shapan_utils.coverage" NAME="shapan_utils Coverage Results" MODIFIED="1606631744811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup.coverage" NAME="setup Coverage Results" MODIFIED="1606814601201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1606648032055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />

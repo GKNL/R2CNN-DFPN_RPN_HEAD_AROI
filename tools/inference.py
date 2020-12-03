@@ -127,8 +127,8 @@ def inference():
                 restorer.restore(sess, restore_ckpt)
                 print('restore model')
 
-            coord = tf.train.Coordinator()
-            threads = tf.train.start_queue_runners(sess, coord)
+            coord = tf.train.Coordinator()  # 创建一个线程协调器，用来管理之后在Session中启动的所有线程
+            threads = tf.train.start_queue_runners(sess, coord)  # 启动入队线程,把文件读入Filename Queue中（一般系统有多少个核，就会启动多少个入队线程）
 
             imgs, img_names = get_imgs()
             for i, img in enumerate(imgs):
