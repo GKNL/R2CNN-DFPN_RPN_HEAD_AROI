@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="add a declaration of this repository" />
+    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="add a declaration of this repository">
+      <change beforePath="$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +52,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI" />
   </component>
   <component name="ProjectId" id="1kjVizG0A5T9TJURBsf0OPugsHq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/yangxue/FPN_v21/tools/test.py" />
@@ -62,20 +65,21 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ideaWorkPlace\Pycharm\R2CNN-DFPN_RPN_HEAD_AROI\libs\box_utils" />
-      <recent name="$PROJECT_DIR$/output" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yangxue\Documents\GitHub\R2CNN_HEAD_FPN_Tensorflow\libs\box_utils" />
       <recent name="E:\yangxue\FPN_v21\data\io" />
       <recent name="E:\yangxue\FPN_v21\tools" />
       <recent name="E:\yangxue\FPN_v21\tools\inference_image" />
       <recent name="E:\yangxue\FPN_v21\libs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideaWorkPlace\Pycharm\graduation_project" />
+      <recent name="D:\ideaWorkPlace\Pycharm\R2CNN-DFPN_RPN_HEAD_AROI\libs\box_utils" />
+      <recent name="$PROJECT_DIR$/output" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -242,7 +246,8 @@
       <workItem from="1606791389918" duration="21716000" />
       <workItem from="1606831381878" duration="1072000" />
       <workItem from="1606885516839" duration="7765000" />
-      <workItem from="1606974178232" duration="2335000" />
+      <workItem from="1606974178232" duration="5870000" />
+      <workItem from="1607145655943" duration="6104000" />
     </task>
     <task id="LOCAL-00001" summary="数据集标注格式转换文件注释">
       <created>1606569996231</created>
@@ -272,7 +277,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606983112464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add a declaration of this repository">
+      <created>1606983207983</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606983207983</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add a declaration of this repository">
+      <created>1606983318107</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606983318107</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +319,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="数据集标注格式转换文件注释" />
     <MESSAGE value="解决Windows系统下Fast RCNN相关cpp文件无法编译的问题！！！！！！【花了两天半的时间！！！】" />
     <MESSAGE value="【修改指南】Windows系统下Fast RCNN相关cpp文件编译的问题" />
@@ -310,32 +332,32 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/libs/box_utils/anchor_utils_pyfunc.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/libs/box_utils/anchor_utils_pyfunc.py</url>
           <line>120</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/data/io/convert_data_to_tfrecord.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/data/io/convert_data_to_tfrecord.py</url>
           <line>84</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/data/io/convert_data_to_tfrecord.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/data/io/convert_data_to_tfrecord.py</url>
           <line>1</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/libs/box_utils/coordinate_convert.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/libs/box_utils/coordinate_convert.py</url>
           <line>70</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/demo.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/tools/demo.py</url>
           <line>367</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/shapan_utils.py</url>
+          <url>file://$PROJECT_DIR$/../graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/tools/shapan_utils.py</url>
           <line>161</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
