@@ -3,7 +3,7 @@ from __future__ import division, print_function, absolute_import
 import os
 
 # root path
-ROO_PATH = os.path.abspath('/ideaWorkPlace/Pycharm/R2CNN-DFPN_RPN_HEAD_AROI')
+ROO_PATH = os.path.abspath('/ideaWorkPlace/Pycharm/graduation_project/R2CNN-DFPN_RPN_HEAD_AROI')
 
 # pretrain weights path
 MODEL_PATH = ROO_PATH + '/output/model'

@@ -91,6 +91,8 @@ if __name__ == '__main__':
                       [150, 150, 100, 50, 45],
                       [150, 150, 100, 50, -45]])
 
+    coordTest = np.array([583,353,778,174,])
+
     coord2 = forward_convert(coord)
     # coord3 = forward_convert(coord1, mode=-1)
     print(coord2)

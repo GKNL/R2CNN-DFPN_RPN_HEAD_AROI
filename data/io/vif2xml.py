@@ -293,7 +293,7 @@ def GetMinRect(geo_points):
     for rect in geo_points:
         point = np.int0(rect[:])
         box = point.reshape([-1, 2])
-        rect1 = cv2.minAreaRect(box)
+        rect1 = cv2.minAreaRect(box)  # 最小外接矩形（斜矩形）
         x, y, w, h, theta = rect1[0][0], rect1[0][1], rect1[1][0], rect1[1][1], rect1[2]
         box = cv2.boxPoints(((x, y), (w, h), theta))
         box = np.reshape(box, [-1, ]).astype(np.int32)
@@ -325,5 +325,8 @@ if __name__ == "__main__":
 
         if count % 200 == 0:
             print(count)
+
+    # geo_points = [[281,587],[266,570],[353,494],[368,511]]
+    # print(GetrotateAngle([964,290],[583,353]))
 
 
