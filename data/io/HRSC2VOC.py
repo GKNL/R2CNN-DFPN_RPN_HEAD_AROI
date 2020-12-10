@@ -16,9 +16,11 @@ from xml.dom.minidom import parseString
 
 import glob
 
-XML_ROOT_FOLDER = r'D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\testHRSC\Annotations'
+# XML_ROOT_FOLDER = r'D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\testHRSC\Annotations'
+XML_ROOT_FOLDER = r'G:\graduation_project_database\HRSC2016\HRSC2016\Test\Annotations'
 XML_DES_FOLDER = r'D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\VOCdevkit\Annotations'
-SRC_IMAGE_ROOT_FOLDER = r"D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\testHRSC\images"
+# SRC_IMAGE_ROOT_FOLDER = r"D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\testHRSC\images"
+SRC_IMAGE_ROOT_FOLDER = r'G:\graduation_project_database\HRSC2016\HRSC2016\Test\AllImages'
 DES_IMAGE_ROOT_FOLDER = r"D:\ideaWorkPlace\Pycharm\graduation_project\R2CNN-DFPN_RPN_HEAD_AROI\data\VOCdevkit\JPEGImages"
 pi = 3.141592
 
@@ -145,8 +147,9 @@ def CropImage(image_path, des_path, Points, Truncateds, Headers, sub_image_h, su
     裁剪图片
     :param image_path: 输入图片路径
     :param des_path: 输出图片路径
-    :param geo_angle: 标注矩阵旋转角度
-    :param geo_label: 标注框中物体类别
+    :param Points: 单个xml中所有旋转标注框的四个顶点坐标集合
+    :param Truncateds: 单个xml中所有旋转标注框中读出的Truncateds属性集合
+    :param Headers: 单个xml中所有舰船目标的舰头坐标集合
     :param sub_image_h: 裁剪子图的高
     :param sub_image_w: 裁剪子图的宽
     :param overlap_h: 高度上可交叠的长度
@@ -194,11 +197,13 @@ def CropImage(image_path, des_path, Points, Truncateds, Headers, sub_image_h, su
                         header_box = np.reshape(header_box, [-1, ])  # 从n行2列矩阵转换回一行n列
                         sub_headers.append(list(header_box))
 
-                sub_image_name = image_path.split('\\')[-1].split('.')[0] + '%{}%{}'.format(ww, hh) + '.jpg'
-                sub_xml_name = image_path.split('\\')[-1].split('.')[0] + '%{}%{}'.format(ww, hh) + '.xml'
-                cv2.imwrite(des_path + "\\" + sub_image_name, sub_image)
-                print(sub_xml_name)
-                WriterXMLFiles(sub_xml_name, sub_boxes, Truncateds, sub_headers, sub_image_w, sub_image_h)
+                # 过滤掉剪裁后被截断/没有目标对象的图片和xml文件，不写入和生成相应的文件
+                if len(sub_boxes) != 0:
+                    sub_image_name = image_path.split('\\')[-1].split('.')[0] + '%{}%{}'.format(ww, hh) + '.jpg'
+                    sub_xml_name = image_path.split('\\')[-1].split('.')[0] + '%{}%{}'.format(ww, hh) + '.xml'
+                    cv2.imwrite(des_path + "\\" + sub_image_name, sub_image)
+                    print(sub_xml_name)
+                    WriterXMLFiles(sub_xml_name, sub_boxes, Truncateds, sub_headers, sub_image_w, sub_image_h)
 
 
 if __name__ == "__main__":
@@ -221,7 +226,7 @@ if __name__ == "__main__":
     count = 0
 
     for it in xml_names:
-        print("----------------------------------------------------------")
+        print("---------------------------{}图片及标注文件处理开始-------------------------------".format(it))
         tree = ET.parse(os.path.join(XML_ROOT_FOLDER, str(it) + '.xml'))
         root = tree.getroot()
 
@@ -271,10 +276,10 @@ if __name__ == "__main__":
         image_path = SRC_IMAGE_ROOT_FOLDER + r'\{}.bmp'.format(it)
         sub_image_h = 600
         sub_image_w = 1000
-        overlap_h = 400
-        overlap_w = 200
+        overlap_h = 300
+        overlap_w = 300
 
         CropImage(image_path, DES_IMAGE_ROOT_FOLDER, Points, Truncateds, Headers,
                   sub_image_h, sub_image_w, overlap_h, overlap_w)
 
-        print("----------------------------------------------------------")
+        print("---------------------------{}文件处理结束-------------------------------".format(it))

@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="添加HRSC2016数据集标注文件的格式转换工具">
+    <list default="true" id="dd24058b-4b11-47e5-ab0f-3437292c0b86" name="Default" comment="修改标注文件的格式转换工具【加入图片剪裁功能】">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/io/HRSC2VOC.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/io/HRSC2VOC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/io/vif2xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/io/vif2xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/io/divide_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/io/divide_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/10%4800%5500.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/10%4800%5500.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/16%2400%9000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/16%2400%9000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/17%4800%7000.tif_horizontal_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/17%4800%7000.tif_horizontal_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/17%4800%7000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/17%4800%7000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/2%4000%6000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/2%4000%6000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/21%5600%3500.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/21%5600%3500.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/21%7200%4000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/21%7200%4000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/27%3200%6000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/27%3200%6000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/29%5600%8000.tif_horizontal_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/29%5600%8000.tif_horizontal_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/29%5600%8000.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/29%5600%8000.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/4%2400%4500.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/4%2400%4500.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/7%2400%6500.tif_horizontal_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/7%2400%6500.tif_horizontal_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/inference_result/7%2400%6500.tif_rotate_fpn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tools/inference_result/7%2400%6500.tif_rotate_fpn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/restore_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/restore_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,8 +83,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pix2pix" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -96,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HRSC2VOC">
+  <component name="RunManager" selected="Python.inference">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,6 +177,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="divide_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FPN_v1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data/io" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/io/divide_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FPN_v1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,28 +214,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/inference.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="setup1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FPN_v1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/box_utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/box_utils/setup1.py" />
-      <option name="PARAMETERS" value="build_ext --inplace" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -238,18 +254,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.inference" />
-      <item itemvalue="Python.setup1" />
       <item itemvalue="Python.coordinate_convert" />
       <item itemvalue="Python.vif2xml" />
       <item itemvalue="Python.HRSC2VOC" />
+      <item itemvalue="Python.divide_data" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.inference" />
+        <item itemvalue="Python.divide_data" />
         <item itemvalue="Python.HRSC2VOC" />
         <item itemvalue="Python.vif2xml" />
         <item itemvalue="Python.coordinate_convert" />
-        <item itemvalue="Python.inference" />
-        <item itemvalue="Python.setup1" />
       </list>
     </recent_temporary>
   </component>
@@ -279,6 +295,8 @@
       <workItem from="1607403434710" duration="18038000" />
       <workItem from="1607438664332" duration="660000" />
       <workItem from="1607491247587" duration="17961000" />
+      <workItem from="1607569598974" duration="1846000" />
+      <workItem from="1607575303470" duration="10966000" />
     </task>
     <task id="LOCAL-00001" summary="数据集标注格式转换文件注释">
       <created>1606569996231</created>
@@ -336,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607426250493</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改标注文件的格式转换工具【加入图片剪裁功能】">
+      <created>1607569722852</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607569722852</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +423,8 @@
     <MESSAGE value="add a declaration of this repository" />
     <MESSAGE value="inference.py载入模型，得到测试结果" />
     <MESSAGE value="添加HRSC2016数据集标注文件的格式转换工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加HRSC2016数据集标注文件的格式转换工具" />
+    <MESSAGE value="修改标注文件的格式转换工具【加入图片剪裁功能】" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改标注文件的格式转换工具【加入图片剪裁功能】" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -440,12 +466,13 @@
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup1.coverage" NAME="setup1 Coverage Results" MODIFIED="1606817663579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$coordinate_convert.coverage" NAME="coordinate_convert Coverage Results" MODIFIED="1606898299539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$newsetup.coverage" NAME="newsetup Coverage Results" MODIFIED="1606813636672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
-    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$inference.coverage" NAME="inference Coverage Results" MODIFIED="1606818678204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$divide_data.coverage" NAME="divide_data Coverage Results" MODIFIED="1607579805947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/io" />
+    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$inference.coverage" NAME="inference Coverage Results" MODIFIED="1607586517123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$shapan_utils.coverage" NAME="shapan_utils Coverage Results" MODIFIED="1606631744811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$vif2xml.coverage" NAME="vif2xml Coverage Results" MODIFIED="1607411780732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/io" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup.coverage" NAME="setup Coverage Results" MODIFIED="1606814601201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1606648032055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
-    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$HRSC2VOC.coverage" NAME="HRSC2VOC Coverage Results" MODIFIED="1607534650684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/io" />
+    <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$HRSC2VOC.coverage" NAME="HRSC2VOC Coverage Results" MODIFIED="1607578614650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/io" />
     <SUITE FILE_PATH="coverage/R2CNN_DFPN_RPN_HEAD_AROI$setup_cuda.coverage" NAME="setup_cuda Coverage Results" MODIFIED="1606651755520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs/box_utils" />
   </component>
 </project>

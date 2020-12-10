@@ -19,7 +19,7 @@ def mkdir(path):
 
 divide_rate = 0.9
 
-root_path = '/yangxue/shapan'
+root_path = 'D:/ideaWorkPlace/Pycharm/graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/data'
 
 image_path = root_path + '/VOCdevkit/JPEGImages'
 xml_path = root_path + '/VOCdevkit/Annotations'
@@ -48,14 +48,14 @@ count = 0
 for i in train_image:
     shutil.copy(os.path.join(image_path, i + '.jpg'), image_output_train)
     shutil.copy(os.path.join(xml_path, i + '.xml'), xml_train)
-    if count % 1000 == 0:
+    if count % 100 == 0:
         print("process step {}".format(count))
     count += 1
 
 for i in test_image:
     shutil.copy(os.path.join(image_path, i + '.jpg'), image_output_test)
     shutil.copy(os.path.join(xml_path, i + '.xml'), xml_test)
-    if count % 1000 == 0:
+    if count % 100 == 0:
         print("process step {}".format(count))
     count += 1
 
