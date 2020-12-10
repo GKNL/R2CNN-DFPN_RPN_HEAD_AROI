@@ -99,6 +99,12 @@ def GetAngle(geo_points):
 
 
 def ReadVIFFiles(vif_path=None, name=None):
+    """
+    读出单个的vif文件中的信息
+    :param vif_path:
+    :param name:
+    :return:
+    """
     if name is None:
         print("Invalid input parameters, please check!")
 
@@ -123,7 +129,7 @@ def ReadVIFFiles(vif_path=None, name=None):
             geo_point.append(abs(int(eval(text_y))))
 
         angle = GetAngle(np.reshape(np.array(geo_point), [-1, 2]))
-        geo_points.append(geo_point)
+        geo_points.append(geo_point)  # 包含了n个数组（每个数组代表一张图中的n个旋转框对象），每个数组包含8个数字，表示4个坐标，例如：[1,2,3,4,5,6,7,8]
         geo_label.append(text_label)
         geo_angle.append(angle)
     return geo_points, geo_label, geo_angle
@@ -238,9 +244,22 @@ def IsPointInRect(point, box):
 
 
 def CropImage(image_path, des_path, geo_points, geo_angle, geo_label, sub_image_h, sub_image_w, overlap_h, overlap_w):
+    """
+    裁剪图片
+    :param image_path: 输入图片路径
+    :param des_path: 输出图片路径
+    :param geo_points: geo坐标点
+    :param geo_angle: 标注矩阵旋转角度
+    :param geo_label: 标注框中物体类别
+    :param sub_image_h: 裁剪子图的高
+    :param sub_image_w: 裁剪子图的宽
+    :param overlap_h: 高度上可交叠的长度
+    :param overlap_w: 宽度上可交叠的长度
+    :return:
+    """
     if os.path.exists(image_path):
         image = cv2.imread(image_path)
-        image_h, image_w, _ = image.shape
+        image_h, image_w, _ = image.shape  # 获取图片长宽
         for hh in range(0, image_h, sub_image_h - overlap_h):
             if (hh + sub_image_h) > image_h:
                 break
@@ -264,10 +283,10 @@ def CropImage(image_path, des_path, geo_points, geo_angle, geo_label, sub_image_
                     #         int(IsPointInRect(box[3], [ww, hh, ww+sub_image_w, hh+sub_image_h]))) >= 2:
                     if (ww < xmin) and (hh < ymin) and (ww + sub_image_w > xmax) and (hh + sub_image_h > ymax):
                         box = np.array(box)
-                        box = np.reshape(box, [-1, 2])
-                        box[:, 0] -= ww
-                        box[:, 1] -= hh
-                        box = np.reshape(box, [-1, ])
+                        box = np.reshape(box, [-1, 2])  # 转换为n行2列的矩阵
+                        box[:, 0] -= ww  # 横坐标裁剪去横向移动的步幅
+                        box[:, 1] -= hh  # 纵坐标裁剪去纵向移动的步幅
+                        box = np.reshape(box, [-1, ])  # 从n行2列矩阵转换回一行n列
                         sub_boxes.append(list(box))
                         sub_labels.append(geo_label[inx])
                         sub_angles.append(geo_angle[inx])
