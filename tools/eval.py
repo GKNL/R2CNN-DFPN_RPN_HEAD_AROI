@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# @Intro   : eval -> evaluation : 对训练好的模型使用各指标进行各维度的评估
 
 from __future__ import absolute_import
 from __future__ import print_function

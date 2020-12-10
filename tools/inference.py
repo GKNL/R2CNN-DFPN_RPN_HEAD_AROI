@@ -17,7 +17,7 @@ from tools import restore_model
 from libs.fast_rcnn import build_fast_rcnn
 from help_utils.tools import *
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 def get_imgs():

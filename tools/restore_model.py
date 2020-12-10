@@ -19,9 +19,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 def get_restorer():
 
+    # 查找最新保存的checkpoint文件的文件名
     checkpoint_path = tf.train.latest_checkpoint(os.path.join(FLAGS.trained_checkpoint, cfgs.VERSION))
 
-    if checkpoint_path != None:
+    if checkpoint_path != None:  # 如果之前训练过，有保存过模型，则从训练结果中加载模型或者部分变量
         if RESTORE_FROM_RPN:
             print('___restore from rpn___')
             model_variables = slim.get_model_variables()
@@ -32,7 +33,7 @@ def get_restorer():
         else:
             restorer = tf.train.Saver()
         print("model restore from :", checkpoint_path)
-    else:
+    else:  # 如果之前没训练过（这是第一次训练），则加载pretrained模型（如Resnet预训练模型等）
         checkpoint_path = FLAGS.pretrained_model_path
         print("model restore from pretrained mode, path is :", checkpoint_path)
 
