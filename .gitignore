@@ -47,3 +47,5 @@ tools/shapan_demo
 
 # output folder
 output
+/data/VOCdevkit/
+/data/tfrecords/

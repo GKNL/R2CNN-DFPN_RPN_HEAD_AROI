@@ -12,13 +12,13 @@ import cv2
 from libs.label_name_dict.label_dict import *
 from help_utils.tools import *
 
-tf.app.flags.DEFINE_string('VOC_dir', '/yangxue/shapan/VOCdevkit/', 'Voc dir')
+tf.app.flags.DEFINE_string('VOC_dir', 'D:/ideaWorkPlace/Pycharm/graduation_project/R2CNN-DFPN_RPN_HEAD_AROI/data/VOCdevkit/VOCdevkit_train/', 'Voc dir')
 tf.app.flags.DEFINE_string('xml_dir', 'Annotations', 'xml dir')
 tf.app.flags.DEFINE_string('image_dir', 'JPEGImages', 'image dir')
 tf.app.flags.DEFINE_string('save_name', 'train', 'save name')
 tf.app.flags.DEFINE_string('save_dir', cfgs.ROO_PATH + '/data/tfrecords/', 'save name')
 tf.app.flags.DEFINE_string('img_format', '.jpg', 'format of image')
-tf.app.flags.DEFINE_string('dataset', 'UAV', 'dataset')
+tf.app.flags.DEFINE_string('dataset', 'ship', 'dataset')
 FLAGS = tf.app.flags.FLAGS
 
 
@@ -33,8 +33,8 @@ def _bytes_feature(value):
 def read_xml_gtbox_and_label(xml_path):
     """
     :param xml_path: the path of voc xml
-    :return: a list contains gtboxes and labels, shape is [num_of_gtboxes, 9],
-           and has [x1, y1, x2, y2, x3, y3, x4, y4, label] in a per row
+    :return: a list contains gtboxes and labels, shape is [num_of_gtboxes, 11],
+           and has [x1, y1, x2, y2, x3, y3, x4, y4, x_head, y_head, label] in a per row
     """
 
     tree = ET.parse(xml_path)
@@ -58,7 +58,7 @@ def read_xml_gtbox_and_label(xml_path):
             label = None
             for child_item in child_of_root:
                 if child_item.tag == 'name':
-                    label = NAME_LABEL_MAP[child_item.text]
+                    label = NAME_LABEL_MAP[child_item.text]  # ship:1 , background:0
                 if child_item.tag == 'bndbox':
                     tmp_box = []
                     for node in child_item:
@@ -67,7 +67,7 @@ def read_xml_gtbox_and_label(xml_path):
                     tmp_box.append(label)
                     box_list.append(tmp_box)
 
-    gtbox_label = np.array(box_list, dtype=np.int32)
+    gtbox_label = np.array(box_list, dtype=np.int32)  # 该图中所有对象（如：舰船）的标注点集合
 
     return img_height, img_width, gtbox_label
 
@@ -99,9 +99,9 @@ def convert_pascal_to_tfrecord():
         img = cv2.imread(img_path)
 
         feature = tf.train.Features(feature={
-            # do not need encode() in linux
+            # do not need encode() in linux, need encode() in windows
             # 'img_name': _bytes_feature(img_name.encode()),
-            'img_name': _bytes_feature(img_name),
+            'img_name': _bytes_feature(img_name.encode()),
             'img_height': _int64_feature(img_height),
             'img_width': _int64_feature(img_width),
             'img': _bytes_feature(img.tostring()),

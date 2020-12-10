@@ -14,7 +14,7 @@ from libs.networks.network_factory import get_flags_byname
 
 RESTORE_FROM_RPN = False
 FLAGS = get_flags_byname(cfgs.NET_NAME)
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 def get_restorer():

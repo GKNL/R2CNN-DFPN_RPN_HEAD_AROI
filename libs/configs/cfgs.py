@@ -31,7 +31,7 @@ WEIGHT_DECAY = {'vggnet16': 0.0005, 'resnet_v1_50': 0.0001, 'resnet_v1_101': 0.0
 EPSILON = 1e-5
 MOMENTUM = 0.9
 MAX_ITERATION = 40000
-GPU_GROUP = "1"
+GPU_GROUP = "0"
 
 # rpn
 SHARE_HEAD = False
